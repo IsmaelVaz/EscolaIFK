@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, sans-serif;
+}
+
+/*
+Cores Padrão
+
+Azul: #1f7cb9
+
+Laranja: #e19655;
+*/
+
+body{
+    background-color: #D3D3D3;
+}
+
+p{
+    font-size: 12pt;
+}
+
+button{
+    cursor: pointer;
+}
+
+#mascara{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,.3);;
+    display: none;
+}
+
+#pop{
+    width:500px; height:200px;
+    background-color: #fff;
+    margin-left:180px; margin-right: auto; margin-top:-250px;
+    display:none;
+    top:50%;
+    padding:10px;
+    border:1px solid #d0d0d0; border-radius: 5px;
+    position:fixed;
+    -webkit-box-shadow: 0px 0px 10px 0px #a9a9a9;
+    -moz-box-shadow:  0px 0px 10px 0px #a9a9a9;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+#pop a{
+    text-decoration: none;
+    color: seagreen;
+}
+
+#pop p{
+    text-align: center;
+    font-size: 16pt;
+    padding-top: 45px;
+}
+
+#pop span{
+    font-size: 18pt;
+    color: seagreen;
+    text-transform: uppercase;
+}
+
+/* Div responsavel por ter todo o conteudo do site */
+div#interface{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+
+}
+
+/* Edição do cabeçalho padrão do site */
+header#cabecalho-principal{
+    width: 900px;
+    height: 190px;
+    background-color: #ff9000;
+    background: url("../_img/logo-cabecalho.png") no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header#cabecalho-principal div#lugar-img{
+    width: 150px;
+    height: 225px;
+    float: left;
+    display: block;
+    margin: 20px;
+    /*background-image: url("../_img/logo.jpg") no-repeat;*/
+}
+
+header#cabecalho-principal div#lugar-img img{
+    max-width: 150px;
+    max-height: 250px;
+    z-index: 3;
+}
+
+header#cabecalho-principal h1{
+    display: block;
+    position: relative;
+    top: 120px;
+    left: 10px;
+    font-size: 25pt;
+}
+
+/*Edição do menu padrão de navegação*/
+nav#menu-navegacao{
+    width: 100%;
+    height: 50px;
+    background-color: #ff9000;
+    padding-top: 6px;
+}
+
+nav#menu-navegacao ul{
+    list-style: none;
+    margin-left: 10px;
+}
+
+nav#menu-navegacao li{
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    margin-right: -7px;
+    font-weight: bold;
+}
+
+nav#menu-navegacao li:hover{
+    background-color: seagreen;
+    
+}
+
+nav#menu-navegacao a{
+    text-decoration: none;
+    color: #000;
+    
+}
+
+/* Edição dos botões de se inscrever, localidado no começo e no fim do site */
+div#botao-direita, div#botao-centro{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+div#botao-direita{
+    text-align: right;
+    margin-right: 100px;
+}
+
+div#botao-centro{
+    text-align: center;
+}
+
+button.botao-inscrever{
+    padding: 10px 20px 10px 20px;
+    font-size: 13pt;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    background-color: #ff9000;
+    color: white;
+}
+
+button.botao-inscrever:hover{
+    background-color: seagreen;
+}
+
+/* Edição do campo onde ficará o texto principal do site*/
+article#sobre-projeto{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+article#sobre-projeto h1{
+   text-align: center;
+   padding-top: 10px;
+   font-size: 16pt;
+   margin: 0px;
+}
+
+article#sobre-projeto p{
+    padding: 20px;
+    text-align: justify;
+    margin: 0px;
+    padding: 10px;
+}
+
+/* Lugar onde ficará todos os cursos e suas informações */
+section#cursos{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+section#cursos img#dedo-indicando{
+   float: left;
+   width: 300px;
+   height: 300px;
+   margin-left: 55px
+}
+
+/* Edição dos cursos*/
+section#cursos nav#todos-cursos {
+    width: 300px;  
+    height: 300px;
+    border: solid 1px rgba(0,0,0,.3);
+    border-radius: 5px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow: auto;
+    box-shadow: inset 0 -10px 10px -10px #000000;
+}
+
+section#cursos ul{
+    list-style: none;
+}
+
+section#cursos li{
+    cursor: pointer;
+    padding: 5px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    font-weight: bold;
+}
+
+li.lista-item:hover:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  right: 0;
+  margin-right: 5px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(0,0,0,.5);
+
+}
+
+section#cursos spam.conteudo-curso{
+    display: none;
+}
+
+
+section#cursos p.titulo-curso{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Edição das informações do curso*/
+section#cursos p#detalhe-curso{
+    background-color: #fff;
+    float: right;
+    width: 360px;
+    display: block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: justify;
+    border-radius: 5px;
+    
+}
+
+/*Edição da página galeria*/
+fieldset.field-video{
+    margin: 30px 20px 0px 20px;
+
+}
+
+fieldset.field-video div.video {
+    border: solid 1px #000;
+    width: 600px;
+    height: 350px;
+    margin: 0px auto 10px auto;
+
+}
+
+fieldset.field-video p {
+    width: 600px;
+    text-align: justify;
+    margin: 0px auto 10px auto;
+
+}
+
+/*Edição do formulario da pagina contato*/
+div#mapa{
+    width: 500px;
+    height: 300px;
+    background-color: #ff9000;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div#contato{
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+div#contato p{
+    margin-top: 10px;
+}
+
+div#contato span.titulo-contato{
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+div#normalizar{
+    clear: both;
+}
+
+/* Edição do botão para ver o restante dos cursos */
+section#cursos div#config-botao{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+section#cursos button#botao-ver-mais{
+    padding: 5px 20px 5px 20px;
+    font-size: 10pt;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+    height: 45px;
+    padding-top: 10px;
+}
+
+footer a{
+    color:#1f7db8;
+    text-decoration: none;
+}

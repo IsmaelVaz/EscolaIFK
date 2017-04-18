@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Projeto Qualifica</title>
+        <link rel="stylesheet" href="_css/estilo.css"/>
+        <script src="_js/jquery.js"></script>
+        <script src="_js/inicial.js"></script>
+        <script src="_js/jquery-scrollfixed.js"></script>
+
+        <script>             
+            function FecharPopUp(){
+                $('#pop').css('display', 'none');
+                $('#mascara').css('display', 'none');
+            }
+            
+            /*Pega o evento de Load da pagina*/
+            $(function() {
+
+                /*Pega a url atual*/
+                var urlAtual = window.location.href;
+
+                /*Seta a url para chamar a função*/
+                var urlParaRedirecionar = 'http://localhost/Qualifica/index.html?finalizado';
+
+                /*verifica se é para execultar a função, se sim, ele a execulta*/
+                if(urlAtual === urlParaRedirecionar) {
+                    //AbrirPopUp();
+                    $('#pop').css('display', 'block');
+                    $('#mascara').css('display', 'block');
+
+                    var alturaTela = $(document).height();
+                    var larguraTela = $(window).width();
+                
+                    //colocando o fundo preto
+                    $('#mascara').css({'width':larguraTela,'height':alturaTela});
+                    $('#mascara').fadeIn(1000); 
+                    $('#mascara').fadeTo("slow",0.8);
+                }
+
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="mascara"></div>
+        <div id="interface">
+            
+            <header id="cabecalho-principal"></header>
+            <nav id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">ínicio</a></li>
+                    <li><a href="galeria.html">galeria</a></li>
+                    <li><a href="contato.html">pré-inscrição</a></li>
+                </ul>
+            </nav>
+            <div id="pop">
+                <p>Solicitação enviada com <span>sucesso</span><br>Aguarde o contato dos nossos representantes</p>
+                <div id="botao-centro">
+                    <button href="#" onclick="FecharPopUp();" class="botao-inscrever">Fechar</button>
+                </div>
+            </div>
+            <section id="corpo">
+                <div id="botao-direita">
+                    <button class="botao-inscrever" onclick="window.location.href='contato.html';">Pré-inscrição</button>
+                </div>
+                <article id="sobre-projeto">
+                    <h1>Projeto Qualifica Menor Aprendiz</h1>
+                    <p>
+                        O projeto Qualifica Menor Aprendiz, tem como objetivo dar a oportunidade aos jovens que queiram trabalhar uma qualificação profissional completa. Se você é jovem e sente que ainda não esta pronto para o mercado de trabalho, venha conhecer nosso projeto e tenha as ferramentas que necessita para destacar-se dos outros profissionais.
+                    </p>
+                    <p>
+                        O Qualifica oferece cursos de 3 (três) a 24 (vinte e quatro) meses, com bolsas de 30% à 100%. Tenha acesso a instrutores qualificados, materias e métodos completamente diferentes do que se vê em outros projetos.
+                    </p>
+                    <p>
+                        Nosso projeto foi criado pensando no jovem que não tem acesso a qualificação profissional, mas que deseja ingressar no mercado de trabalho.
+                    </p>
+                    <p>
+                        Se você tem vontade de iniciar sua vida profissional, realize sua pré-inscrição e aguarde o contato dos nossos recrutadores.
+                    </p>
+                    <p>
+                        Projeto Qualifica Menor Aprendiz, dando chances para o seu sucesso.
+                    </p>
+                </article>
+                
+                <section id="cursos">
+                    <fieldset>
+                        <legend>Cursos</legend>
+                        <nav id="todos-cursos">
+                            <ul>
+                                <li class="lista-item">AutoCAD 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">AutoCAD</p>
+                                        <p>
+                                            O curso é ideal para os profissionais que desejam compreender as características e os recursos básicos oferecidos pela ferramenta CAD, que é utilizada mundialmente na criação de projetos para áreas específicas de arquitetura, mecânica, elétrica, geoprocessamento, entre outras. Com o curso, o aluno estará capacitado para desenvolver projetos, traçados elementares e elaborar geometrias. 
+                                        </p>
+                                    </spam>
+                                    <spam class="imagem-curso">_img/logo.png</spam>
+                                </li>
+                                <li class="lista-item">Blender 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Blender</p>
+                                        <p>
+                                            O Blender tornou-se uma referência em modelagem 3D. Se você gosta do mundo 3D e pensa em criar objetos e animações em 3 dimensões, o Curso de Blender 3D irá ensinar tudo o que você precisa para utilizará este poderoso programa.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Pacote Office
+                                    <spam class="conteudo-curso">
+                                    <p class="titulo-curso">Pacote Office</p>
+                                    <p>
+                                        O Curso de Pacote Office abrange os principais programas do pacote mais importante do planeta. Capacita os jovens a utilizar as principais ferramentas do pacote office: Word, Excel e Power Point. Com a aprendizagem destes programas o participante adquire qualificação e experiência fundamental para uso pessoal ou profissional no dia a dia e estará apto a utilizar todos os recursos do Pacote Office e suas várias ferramentas tecnológicas. Matricule-se e esteja pronto para o mercado de trabalho. 
+                                    </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Mídias Sociais 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Mídias Sociais</p>
+                                        <p>
+                                            O curso de Mídias Sociais oferece um conhecimento fundamental para todos aqueles que desejam utilizar as mídias sociais como ferramenta de marketing, aprendendo como aplicá-las e utilizá-las da maneira mais produtiva para atender as necessidades de cada negócio. 
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Artes Gráficas 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Artes Gráficas</p>
+                                        <p>
+                                            Esse curso oferece ao jovem toda a experiência com os softwares mais utilizados no mercado gráfico. Adquira conhecimentos em CorelDraw, Indesign, Photoshop.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Web Design 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Web Design</p>
+                                        <p>
+                                            Umas das profissões mais bem pagas no mercado de T.I.. Um web design é responsável pela criação e manutenção de sites, podendo ser autonomo ou trabalhar para alguma empresa. O curso oferece acesso as ferramentas como Dreamweaver, Flash e Fireworks.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Desenvolvimento Pessoal 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Desenvolvimento Pessoal</p>
+                                        <p>
+                                            Não se sente confiante em entrevistas? Tem medo de pedir um aumento? Não sabe por onde começar a procurar um emprego? Com o curso de desenvolvimento pessoal você adquiri todos o conhecimento necessário para deixar de ser mais um número no mercado de trabalho. Aprenda o auto coaching, o desenvolvimento pessoal, técnicas de oratória, entre outras técnicas para ser a estrela na entrevista de emprego.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Liderança 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Liderança</p>
+                                        <p>No curso Liderança, você encontra informações sobre o mercado que exige profissionais diferenciados, além de formas de superar suas limitações por meio de um planejamento bem estruturado voltado para desenvolver suas habilidades gerenciais. Destaque-se!</p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Administração 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Administração</p>
+                                        <p>
+                                            No Curso de Administração, explica sobre os processos de gerenciamento de uma empresa, entender o seu ambiente, função e características para organizar, controlar e motivar o desempenho dos negócios.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Gestão de Pessoas 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Gestão de Pessoas</p>
+                                        <p>
+                                            O curso Gestão de Pessoas, oferece ao participante o conhecimento sobre liderança, motivação, formação de equipe, retenção e treinamento de pessoas, noção sobre as leis trabalhistas, cálculo de folha de pagamento, noções de RH e Departamento Pessoal.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Gestão Bancária 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Gestão Bancária</p>
+                                        <p>
+                                            Contribuir para a eficiente gestão de processos na atividade bancária, através do crescimento pessoal e profissional dos participantes, e pela agregação de conhecimento técnico. Noções de contabilidade bancária, legislação, auditoria e muito mais.
+                                        </p>
+                                    </spam>
+                                </li>
+                                <li class="lista-item">Inglês 
+                                    <spam class="conteudo-curso">
+                                        <p class="titulo-curso">Inglês</p>
+                                        <p>
+                                            Curso de conversação, leitura e gramática. Vivência com inglês britânico e americano.
+                                        </p>
+                                    </spam>
+                                </li>
+                            </ul>
+                            
+                        </nav>
+                        
+                        <img id="dedo-indicando" src="_img/indicacao.png" alt="Dedo indicando os cursos na lateral"/>
+                        <p id="detalhe-curso"></p>
+                        <div id="config-botao">
+                            <button id="botao-ver-mais" >Ver Todos</button>
+                        </div>
+                     </fieldset>
+                </section>
+                
+                <div id="botao-centro">
+                    <button class="botao-inscrever" onclick="window.location.href='contato.html';">Pré-inscrição</button>
+                </div>
+            </section>
+            <footer>
+                <p>
+                    Copyright &copy; Qualifica
+                    <br/>
+                    Developed by <a href="http://www.msolucaoti.com.br" target="_blank">MSOLUÇÃOTI</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

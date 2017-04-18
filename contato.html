@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Projeto Qualifica</title>
+        <link rel="stylesheet" href="_css/estilo.css"/>
+        <script src="_js/jquery.js"></script>
+        <script src="_js/inicial.js"></script>
+        <script src="_js/jquery-scrollfixed.js"></script>
+        <script type="text/javascript">
+        	/* Máscaras ER */
+            function mascara(o,f){
+                v_obj=o
+                v_fun=f
+                setTimeout("execmascara()",1)
+            }
+            function execmascara(){
+                v_obj.value=v_fun(v_obj.value)
+            }
+            function mtel(v){
+                v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+                v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+                v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+                return v;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="interface">
+            <header id="cabecalho-principal"></header>
+            <nav id="menu-navegacao">
+                <ul>
+                    <li><a href="index.html">ínicio</a></li>
+                    <li><a href="galeria.html">galeria</a></li>
+                    <li><a href="contato.html">pré-inscrição</a></li>
+                </ul>
+            </nav>
+            <section id="corpo">
+                <div id="mapa">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:300px;width:500px;'></div><div><small></small></div><div><small></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(-23.509912,-46.872888399999965),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-23.509912,-46.872888399999965)});infowindow = new google.maps.InfoWindow({content:'<strong>Escola IFK</strong><br>Rua Damião Fernandes, 69, Barueri<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                </div>
+                <div id="contato">
+                    <p><span class="titulo-contato">Endereço</span></br>Damião Fernandes, nº 69</br>CEP 06404-000</br>Barueri - SP</p>
+                    <p><span class="titulo-contato">Telefone</span></br>4382-1911</p>
+                    <p><span class="titulo-contato">Horário de atendimento</span></br>Segunda à Sexta dàs 9h até 18h </br> Sábado dàs 9h até 14h</p>
+                </div>
+                <div id="normalizar"></div>
+            </section>
+            <footer>
+                <p>
+                    Copyright &copy; Qualifica
+                    <br/>
+                    Developed by <a href="http://www.msolucaoti.com.br" target="_blank">MSOLUÇÃOTI</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
